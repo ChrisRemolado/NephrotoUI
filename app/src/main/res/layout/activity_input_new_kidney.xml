@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/kidney_metrics"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:titleTextColor="#fff"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="24dp"
+                android:textSize="28sp"
+                android:text="Donor Name"/>
+
+            <EditText
+                android:id="@+id/donor_name"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:textSize="24sp"
+                android:hint="Enter donor's name"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="24dp"
+                android:textSize="28sp"
+                android:text="Length"/>
+
+            <EditText
+                android:id="@+id/input_length"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:textSize="24sp"
+                android:hint="Enter length (cm)"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="28sp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="24dp"
+                android:text="Width"/>
+            <EditText
+                android:id="@+id/input_width"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:textSize="24sp"
+                android:hint="Enter width (cm)"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="28sp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="24dp"
+                android:text="Amount of Arteries"/>
+            <EditText
+                android:id="@+id/input_arteries"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:textSize="24sp"
+                android:hint="Enter amount"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="28sp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="24dp"
+                android:text="Distance of Arteries"/>
+            <EditText
+                android:id="@+id/input_distance_of_arteries"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:textSize="24sp"
+                android:hint="Enter distance (cm)"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="28sp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="24dp"
+                android:text="Abnormalities"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp">
+
+                <CheckBox
+                    android:id="@+id/abnormalities_yes"
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"
+                    android:textSize="20dp"/>
+                <CheckBox
+                    android:id="@+id/abnormalities_no"
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/abnormalities_yes"
+                    android:layout_marginLeft="24dp"
+                    android:text="No"
+                    android:textSize="20dp"
+                    />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="28sp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="24dp"
+                android:text="Surgical Damage"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp">
+
+                <CheckBox
+                    android:id="@+id/surg_damage_yes"
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"
+                    android:textSize="20dp"/>
+                <CheckBox
+                    android:id="@+id/surg_damage_no"
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/surg_damage_yes"
+                    android:layout_marginLeft="24dp"
+                    android:text="No"
+                    android:textSize="20dp"
+                    />
+            </RelativeLayout>
+            <Button
+                android:id="@+id/add_kidney"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="30dp"
+                android:text ="Next"
+                android:textSize="24dp"
+                />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
